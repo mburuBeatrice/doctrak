@@ -16,3 +16,48 @@ header,
 .top-nav-collapse {
     background-color: #24355C;
 }
+#trakcol1{
+  margin-right: 500px;
+}
+#hr{
+  margin-right: 200px;
+}
+#whitetxt1{
+  margin-right: 200px;
+}
+#whitetxt2{
+  margin-right: 200px;
+}
+#whitetxt3{
+  margin-right: 200px;
+}
+#form1{
+  margin-right: 200px;
+
+}
+#whitetxt4{
+  margin-left: 200px;
+}
+#md-form1{
+  margin-left: 200px;
+}
+#md-form2{
+  margin-left: 200px;
+}
+#md-form3{
+  margin-left: 200px;
+}
+#md-form4{
+  margin-left: 150px;
+}
+#submitForm{
+  padding: 8%;
+}
+
+.md-form label {
+    color: #000000;
+
+}
+#instructions{
+padding:10%;
+}
