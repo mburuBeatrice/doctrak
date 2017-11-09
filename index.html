@@ -9,6 +9,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Creepster|Great+Vibes|Niconne|Parisienne|Yellowtail" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
@@ -20,14 +21,14 @@
 <body>
 
   <!--Main Navigation-->
-  <header class="full-bg-img" style="background-image:url('img/404.jpg'); background-size:cover; background-position:center;">
+  <header class="full-bg-img" style="background-image:url('https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/fc/3051169-poster-p-1-this-brooding-cityscape-is-what-google-maps-dreamt-about-last-night.jpg'); background-size:cover; background-position:center;">
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">DocTrak</a>
+        <a class="navbar-brand" href="./index.html" id="logo">DOCTRAK</a>
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -61,7 +62,7 @@
               <a href="./submit.html" class="nav-link"><i class="material-icons">file_upload</i></a>
             </li>
             <li class="nav-item">
-              <a href="./submit.html" class="nav-link"><i class="material-icons">info</i></a>
+              <a href="./about.html" class="nav-link"><i class="material-icons">info</i></a>
             </li>
           </ul>
         </div>
@@ -72,7 +73,7 @@
     <!--/.Navbar-->
     <div class="row" style="padding-top: 60px">
       <div class="col-md-6 col-lg-6 col-sm-12"  id="instructions">
-        <h1><a href="./index.html">DOCTRAK</a></h1>
+        <h1><a href="./index.html" id="card-head">DOCTRAK</a></h1>
         <div class="card">
           <div class="card-block" style="padding: 20px;">
             <div class="card-title">
@@ -84,36 +85,42 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-unique"  onclick="loadDoc()"><i class="material-icons ml-1">search</i></button>
+                <button id="checkdoc" class="btn btn-unique"><i class="material-icons ml-1 ">search</i></button>
             </div>
+            <!-- onclick="loadDoc()" -->
           </div>
           </div>
       </div>
-      <div class="col-md-6 col-lg-6 col-sm-12 text-center" style="color: white;">
-        <div style="padding-left: 15%;padding-right: 15%;" >
+      <div class="col-md-6 col-lg-6 col-sm-12" style="color: white;">
+        <div class="padsub" >
         <!-- Form contact -->
-          <h2>Submit Lost Document</h2>
           <form class="p-5 card" id="submitForm">
+            <h2 class="text-black">Submit Document</h2>
 
           <div class="md-form form-sm">
+            <i class="material-icons prefix grey-text">label</i>
             <input type="text" id="form3" class="form-control">
             <label for="form3">Your Name</label>
           </div>
 
           <div class="md-form form-sm">
+            <i class="material-icons prefix grey-text">email</i>
             <input type="text" id="form2" class="form-control">
             <label for="form2">Your Email</label>
           </div>
 
           <div class="md-form form-sm">
+            <i class="material-icons prefix grey-text">description</i>
             <input type="text" id="form32" class="form-control">
             <label for="form34">Serial Number</label>
           </div>
-          <div class="md-form form-sm">
+          <!-- <div class="md-form form-sm">
+            <i class="material-icons prefix grey-text">room</i>
             <input type="text" id="form32" class="form-control">
             <label for="form34">Location</label>
-          </div>
+          </div> -->
           <div class="md-form form-sm">
+            <i class="material-icons prefix grey-text">room</i>
             <input type="text" id="form32" class="form-control">
             <label for="form34">County</label>
           </div>
@@ -132,7 +139,7 @@
   <!--Main Navigation-->
 
   <!--Main layout-->
-  <main class="mt-5">
+  <main class="mt-5 mainer">
     <div class="container">
 
       <!--Section: Contact-->
@@ -234,7 +241,7 @@
   <!--Main layout-->
 
   <!--Footer-->
-  <footer class="page-footer blue center-on-small-only unique-color-dark pt-0">
+  <footer class="page-footer blue center-on-small-only black pt-0">
 
     <!--Copyright-->
     <div class="footer-copyright">
@@ -259,22 +266,72 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-
+  <!--{
+    "results": [
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "romain",
+          "last": "hoogmoed"
+        },
+        "location": {
+          "street": "1861 jan pieterszoon coenstraat",
+          "city": "maasdriel",
+          "state": "zeeland",
+          "postcode": 69217
+        },
+        "email": "romain.hoogmoed@example.com",
+        "login": {
+          "username": "lazyduck408",
+          "password": "jokers",
+          "salt": "UGtRFz4N",
+          "md5": "6d83a8c084731ee73eb5f9398b923183",
+          "sha1": "cb21097d8c430f2716538e365447910d90476f6e",
+          "sha256": "5a9b09c86195b8d8b01ee219d7d9794e2abb6641a2351850c49c309f1fc204a0"
+        },
+        "dob": "1983-07-14 07:29:45",
+        "registered": "2010-09-24 02:10:42",
+        "phone": "(656)-976-4980",
+        "cell": "(065)-247-9303",
+        "id": {
+          "name": "BSN",
+          "value": "04242023"
+        },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/83.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/83.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/83.jpg"
+        },
+        "nat": "NL"
+      }
+    ],
+    "info": {
+      "seed": "2da87e9305069f1d",
+      "results": 1,
+      "page": 1,
+      "version": "1.1"
+    }
+  } -->
   <script>
   $(document).ready(function () {
     $('#checkdoc').click(function(e){
       e.preventDefault();
       var id = $("#serial").val();
       $.ajax({
-                  method:"GET",
-                  url: 'https://jsonplaceholder.typicode.com/users/'+id,
-                  dataType: 'application/json',
-                  data: {},
-                  success:function(doc){
-                      $("#submitForm").html( "<li>"+doc.id+"</li>" );
-
-                 }
-              });
+        url: 'https://randomuser.me/api/',
+        dataType: 'json',
+        success: function(data) {
+          $("#submitForm").html( "<div class=\"black paddy\"><img src=\""+data.results[0].picture.large+"\" width=\"100%\"/>Name: "
+          +data.results[0].name.title+" "+data.results[0].name.first+" "+data.results[0].name.last +"<br />Serial Number: "+
+          data.results[0].id.value+"<hr />"
+          + "<br>Found In: " + data.results[0].location.city+ " ,"+ data.results[0].location.state
+          + "<br>Found On: " + data.results[0].registered
+         + "<br>Email: " + data.results[0].email
+          + "<br>Or Call: " + data.results[0].phone
+         +"</div><a href=\"\" class=\"btn btn-unique\">Refresh <i class=\"fa material-icons ml-1\">refresh</i></a>" );
+        }
+      });
     });
   });
   </script>
