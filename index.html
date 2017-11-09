@@ -84,34 +84,38 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-unique" id="checkdoc"><i class="material-icons ml-1">search</i></button>
+                <button class="btn btn-unique"  onclick="loadDoc()"><i class="material-icons ml-1">search</i></button>
             </div>
           </div>
           </div>
       </div>
       <div class="col-md-6 col-lg-6 col-sm-12 text-center" style="color: white;">
+        <div style="padding-left: 15%;padding-right: 15%;" >
         <!-- Form contact -->
-        <form class="p-5 card" id="submitForm">
+          <h2>Submit Lost Document</h2>
+          <form class="p-5 card" id="submitForm">
 
           <div class="md-form form-sm">
             <input type="text" id="form3" class="form-control">
-            <label for="form3">Name of person submitting</label>
+            <label for="form3">Your Name</label>
           </div>
 
           <div class="md-form form-sm">
             <input type="text" id="form2" class="form-control">
-            <label for="form2">Email of person submitting</label>
+            <label for="form2">Your Email</label>
           </div>
 
           <div class="md-form form-sm">
             <input type="text" id="form32" class="form-control">
-            <label for="form34">Document serial number</label>
+            <label for="form34">Serial Number</label>
           </div>
-
           <div class="md-form form-sm">
-                <label for="form8">Other details</label>
-            <textarea type="text" id="form8" class="md-textarea" style="height: 100px"></textarea>
-
+            <input type="text" id="form32" class="form-control">
+            <label for="form34">Location</label>
+          </div>
+          <div class="md-form form-sm">
+            <input type="text" id="form32" class="form-control">
+            <label for="form34">County</label>
           </div>
 
           <div class="text-center">
@@ -121,6 +125,7 @@
         </form>
         <!-- Form contact -->
       </div>
+    </div>
     </div>
 
   </header>
@@ -256,19 +261,22 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
 
   <script>
-  $('#checkdoc').click(function(){
-    var id = $("#serial").val();
-  $.ajax({
-              method:"GET",
-              url: 'https://jsonplaceholder.typicode.com/users/1',
-              dataType: 'application/json',
-              data: {},
-              success:function(doc){
-                  $("#submitForm").html( "<li>"+doc.id+"</li>" );
+  $(document).ready(function () {
+    $('#checkdoc').click(function(e){
+      e.preventDefault();
+      var id = $("#serial").val();
+      $.ajax({
+                  method:"GET",
+                  url: 'https://jsonplaceholder.typicode.com/users/'+id,
+                  dataType: 'application/json',
+                  data: {},
+                  success:function(doc){
+                      $("#submitForm").html( "<li>"+doc.id+"</li>" );
 
-             }
-          });
-});
+                 }
+              });
+    });
+  });
   </script>
 
   <!--Google Maps-->

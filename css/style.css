@@ -51,13 +51,14 @@ header,
   margin-left: 150px;
 }
 #submitForm{
-  padding: 8%;
+  padding: 10%;
 }
 
 .md-form label {
     color: #000000;
 
 }
+
 #instructions{
 padding:10%;
 }
